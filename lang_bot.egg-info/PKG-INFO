@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: lang_bot
+Version: 0.0.1
+Summary: This is bot for learning different languages
+Author-email: Jisna Patharakkal <jisna12@gmail.com>
+Requires-Dist: langchain_openai
+Requires-Dist: flask
+Requires-Dist: python-dotenv
+Requires-Dist: langchain

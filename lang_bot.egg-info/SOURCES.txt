@@ -1,0 +1,10 @@
+pyproject.toml
+lang_bot/__init__.py
+lang_bot/chat.py
+lang_bot/db.py
+lang_bot/languagebot.py
+lang_bot.egg-info/PKG-INFO
+lang_bot.egg-info/SOURCES.txt
+lang_bot.egg-info/dependency_links.txt
+lang_bot.egg-info/requires.txt
+lang_bot.egg-info/top_level.txt

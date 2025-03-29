@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Language Chat</title>
+    <style>
+        /* Add all the CSS from above here */
+    </style>
+</head>
+<body>
+    <h1>Practice {{ learning_language }}</h1>
+    
+    <div class="controls">
+        <form method="POST" class="mistakes-form">
+            <button type="submit" name="show_mistakes" class="btn btn-warning">
+                Show My Mistakes
+            </button>
+        </form>
+
+        <form method="POST" class="message-form">
+            <input type="text" name="user_input" placeholder="Type your message..." required>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </div>
+
+    {% if mistakes_summary %}
+    <div class="mistakes-summary alert alert-info">
+        <h4>Your Mistakes Summary</h4>
+        <pre>{{ mistakes_summary }}</pre>
+    </div>
+    {% endif %}
+
+    <div class="conversation">
+        {% for message in conversation %}
+            <div class="message user-message">
+                <div class="text">{{ message.user }}</div>
+                {% if message.corrected != message.user %}
+                    <div class="correction">(Corrected: {{ message.corrected }})</div>
+                {% endif %}
+            </div>
+            
+            <div class="message bot-message">
+                <div class="text target-language">{{ message.bot }}</div>
+                {% if message.translation %}
+                    <div class="translation">({{ message.translation }})</div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

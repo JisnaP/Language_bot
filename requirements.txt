@@ -1,0 +1,8 @@
+langchain 
+flask
+langchain-openai
+python-dotenv
+langchain_community
+langchain-core
+httpx
+-e .
